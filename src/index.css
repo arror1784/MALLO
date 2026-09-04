@@ -45,6 +45,9 @@
   --color-pill-border: #eadbc6;
   --color-overlay-btn-bg: #ffffffb3;
   --color-step-pending-bg: #f5f0e7;
+  --color-status-failed-bg: #f1eee9;
+  --color-status-failed-text: #81796d;
+  --color-report-badge-text: #a8e6c4;
 
   --color-danger: #e0483e;
 }
