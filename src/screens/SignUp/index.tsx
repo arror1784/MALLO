@@ -32,10 +32,10 @@ export function SignUp() {
       </button>
 
       <div className="pt-8">
-        <h1 className="text-[25px] font-bold tracking-[-0.75px] text-text-primary">
+        <h1 className="text-[25px] leading-[37.5px] font-bold tracking-[-0.75px] text-text-primary">
           만나서 반가워요
         </h1>
-        <p className="mt-2 text-[15px] text-text-body">
+        <p className="mt-2 text-[15px] leading-[22.5px] text-text-body">
           하늘이와의 대화, 말로가 함께 볼게요.
         </p>
       </div>
@@ -48,7 +48,7 @@ export function SignUp() {
         }}
       >
         <label className="block">
-          <span className="text-[13px] font-semibold text-text-primary">이메일</span>
+          <span className="text-[13px] leading-[19.5px] font-semibold text-text-primary">이메일</span>
           <input
             type="email"
             value={email}
@@ -59,7 +59,7 @@ export function SignUp() {
         </label>
 
         <label className="mt-3 block">
-          <span className="text-[13px] font-semibold text-text-primary">비밀번호</span>
+          <span className="text-[13px] leading-[19.5px] font-semibold text-text-primary">비밀번호</span>
           <input
             type="password"
             value={password}
@@ -70,7 +70,7 @@ export function SignUp() {
         </label>
 
         <label className="mt-3 block">
-          <span className="text-[13px] font-semibold text-text-primary">비밀번호 확인</span>
+          <span className="text-[13px] leading-[19.5px] font-semibold text-text-primary">비밀번호 확인</span>
           <input
             type="password"
             value={passwordConfirm}
@@ -82,21 +82,21 @@ export function SignUp() {
 
         <div className="flex items-center gap-3 py-5">
           <div className="h-px flex-1 bg-border" />
-          <span className="text-xs text-text-subtle">또는</span>
+          <span className="text-xs leading-[18px] text-text-subtle">또는</span>
           <div className="h-px flex-1 bg-border" />
         </div>
 
         <div className="grid grid-cols-2 gap-2">
           <button
             type="button"
-            className="flex h-11 items-center justify-center gap-2 rounded-[20px] border-[0.5px] border-border-input text-[13px] font-semibold text-text-primary"
+            className="flex h-11 items-center justify-center gap-2 rounded-[20px] border-[0.5px] border-border-input text-[13px] leading-[19.5px] font-semibold text-text-primary"
           >
-            <span className="text-[13px] font-bold text-brand-google">G</span>
+            <span className="text-[13px] leading-[19.5px] font-bold text-brand-google">G</span>
             Google
           </button>
           <button
             type="button"
-            className="flex h-11 items-center justify-center gap-2 rounded-[20px] border-[0.5px] border-border-input text-[13px] font-semibold text-text-primary"
+            className="flex h-11 items-center justify-center gap-2 rounded-[20px] border-[0.5px] border-border-input text-[13px] leading-[19.5px] font-semibold text-text-primary"
           >
             <img src={appleIcon} alt="" className="size-4" />
             Apple
@@ -122,7 +122,7 @@ export function SignUp() {
           <button
             type="submit"
             disabled={!canSubmit}
-            className="flex h-[52px] w-full items-center justify-center rounded-[20px] bg-primary text-[15px] font-semibold text-text-primary shadow-[0_6px_8px_rgba(255,161,2,0.18)] disabled:opacity-45"
+            className="flex h-[52px] w-full items-center justify-center rounded-[20px] bg-primary text-[15px] leading-[22.5px] font-semibold text-text-primary shadow-[0_6px_8px_rgba(255,161,2,0.18)] disabled:opacity-45"
           >
             가입하기
           </button>

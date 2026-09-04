@@ -31,12 +31,12 @@ export function ReportDetail() {
         </button>
       </div>
 
-      <p className="mt-4 text-[13px] text-text-subtle">7월 18일 · 놀이 시간</p>
+      <p className="mt-4 text-[13px] leading-[19.5px] text-text-subtle">7월 18일 · 놀이 시간</p>
       <div className="mt-1 flex items-center gap-2">
-        <h1 className="text-[22px] font-bold text-text-primary">
+        <h1 className="text-[22px] leading-[33px] font-bold text-text-primary">
           {currentChild.name} · {currentChild.ageMonths}개월
         </h1>
-        <span className="rounded-full bg-status-done-bg px-2 py-1 text-[10px] font-semibold text-report-good">
+        <span className="rounded-full bg-status-done-bg px-2 py-1 text-[10px] leading-[15px] font-semibold text-report-good">
           신뢰도 충분
         </span>
       </div>
@@ -44,9 +44,9 @@ export function ReportDetail() {
       <div className="mt-5 grid grid-cols-3 gap-2">
         {sessionMetrics.map((metric) => (
           <div key={metric.id} className="rounded-2xl bg-surface-cream p-3">
-            <p className="text-[11px] font-medium text-text-body">{metric.label}</p>
-            <p className="mt-1 text-[19px] font-bold text-text-link">{metric.value}</p>
-            <p className="mt-1 text-[10px] font-medium text-text-subtle">{metric.refLabel}</p>
+            <p className="text-[11px] leading-[16.5px] font-medium text-text-body">{metric.label}</p>
+            <p className="mt-1 text-[19px] leading-[28.5px] font-bold text-text-link">{metric.value}</p>
+            <p className="mt-1 text-[10px] leading-[15px] font-medium text-text-subtle">{metric.refLabel}</p>
             <div className="mt-3">
               <MetricProgressBar progress={metric.progress} />
             </div>
@@ -56,16 +56,16 @@ export function ReportDetail() {
       <button
         type="button"
         onClick={() => navigate("/report/open-question")}
-        className="mt-3 flex w-full items-center justify-center py-2 text-[13px] font-semibold text-text-link"
+        className="mt-3 flex w-full items-center justify-center py-2 text-[13px] leading-[19.5px] font-semibold text-text-link"
       >
         핵심 지표 자세히 →
       </button>
 
-      <h2 className="mt-6 text-[17px] font-semibold text-text-primary">이번 대화에서 찾아본 기회</h2>
+      <h2 className="mt-6 text-[17px] leading-[25.5px] font-semibold text-text-primary">이번 대화에서 찾아본 기회</h2>
       <ol className="mt-3 flex flex-col gap-3">
         {sessionOpportunities.map((text, i) => (
           <li key={text} className="flex items-start gap-3">
-            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-text-primary">
+            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs leading-[18px] font-bold text-text-primary">
               {i + 1}
             </span>
             <p className="pt-0.5 text-[13px] leading-5 text-tip-card-text">{text}</p>
@@ -74,11 +74,11 @@ export function ReportDetail() {
       </ol>
 
       <section className="mt-5 rounded-2xl border-[0.5px] border-border bg-surface p-4">
-        <p className="text-sm font-semibold text-text-primary">최근 4주 발화량</p>
+        <p className="text-sm leading-[21px] font-semibold text-text-primary">최근 4주 발화량</p>
         <div className="mt-3">
           <Sparkline values={fourWeekUtterances} />
         </div>
-        <p className="text-xs text-report-good">꾸준히 늘고 있어요 👏</p>
+        <p className="text-xs leading-[18px] text-report-good">꾸준히 늘고 있어요 👏</p>
       </section>
 
       <div className="mt-4 grid grid-cols-2 gap-2">
@@ -102,7 +102,7 @@ export function ReportDetail() {
         </button>
       </div>
 
-      <p className="mb-6 mt-5 border-t-[0.5px] border-border pt-3 text-center text-[11px] text-text-subtle">
+      <p className="mb-6 mt-5 border-t-[0.5px] border-border pt-3 text-center text-[11px] leading-[16px] text-text-subtle">
         참고 정보이며 발달 진단이 아니에요.
       </p>
     </div>

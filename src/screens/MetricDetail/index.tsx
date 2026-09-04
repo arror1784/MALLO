@@ -22,8 +22,8 @@ export function MetricDetail() {
         <img src={backIcon} alt="" className="size-[21px]" />
       </button>
 
-      <p className="mt-5 text-sm text-text-subtle">핵심 지표</p>
-      <h1 data-testid="metric-label" className="mt-1 text-2xl font-bold text-text-primary">
+      <p className="mt-5 text-sm leading-[21px] text-text-subtle">핵심 지표</p>
+      <h1 data-testid="metric-label" className="mt-1 text-2xl leading-[36px] font-bold text-text-primary">
         {metric.label}
       </h1>
 
@@ -31,27 +31,27 @@ export function MetricDetail() {
         <p data-testid="metric-value" className="text-[52px] font-bold leading-none text-primary">
           {metric.value}
         </p>
-        <p className="mt-2 text-[13px] text-text-body">{metric.refRangeLabel}</p>
-        <span className="mt-2 rounded-full bg-status-done-bg px-3 py-1.5 text-xs font-semibold text-report-good">
+        <p className="mt-2 text-[13px] leading-[19.5px] text-text-body">{metric.refRangeLabel}</p>
+        <span className="mt-2 rounded-full bg-status-done-bg px-3 py-1.5 text-xs leading-[18px] font-semibold text-report-good">
           {metric.deltaLabel}
         </span>
       </div>
 
       <div className="mt-6 rounded-2xl border-[0.5px] border-border bg-surface p-4">
-        <p className="text-[15px] font-semibold text-text-primary">{metric.label}이란?</p>
+        <p className="text-[15px] leading-[22.5px] font-semibold text-text-primary">{metric.label}이란?</p>
         <p className="mt-2 text-[13px] leading-5 text-tip-card-text">{metric.description}</p>
       </div>
 
       <h2 className="mt-6 text-base font-semibold text-text-primary">월령별 참고 범위</h2>
       <div className="mt-3 overflow-hidden rounded-[20px] border-[0.5px] border-border">
         <div className="grid grid-cols-2 bg-surface-cream p-3">
-          <span className="text-xs font-semibold text-text-primary">월령</span>
-          <span className="text-xs font-semibold text-text-primary">참고 범위</span>
+          <span className="text-xs leading-[18px] font-semibold text-text-primary">월령</span>
+          <span className="text-xs leading-[18px] font-semibold text-text-primary">참고 범위</span>
         </div>
         {metric.refTable.map((row) => (
           <div key={row.ageRange} className="grid grid-cols-2 border-t-[0.5px] border-border p-3">
-            <span className="text-xs text-text-primary">{row.ageRange}</span>
-            <span className="text-xs text-text-primary">{row.range}</span>
+            <span className="text-xs leading-[18px] text-text-primary">{row.ageRange}</span>
+            <span className="text-xs leading-[18px] text-text-primary">{row.range}</span>
           </div>
         ))}
       </div>
@@ -70,7 +70,7 @@ export function MetricDetail() {
               key={m.id}
               type="button"
               onClick={() => setMetricId(m.id)}
-              className="shrink-0 rounded-[20px] border-[0.5px] border-border bg-surface px-4 py-3 text-[13px] font-medium text-text-primary"
+              className="shrink-0 rounded-[20px] border-[0.5px] border-border bg-surface px-4 py-3 text-[13px] leading-[19.5px] font-medium text-text-primary"
             >
               {m.label}
             </button>

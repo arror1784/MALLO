@@ -23,13 +23,13 @@ export function CheckRow({
           checked ? "border-primary bg-primary" : "border-checkbox-border bg-white"
         }`}
       />
-      <span className="flex-1 text-sm font-medium text-text-primary">
+      <span className="flex-1 text-sm leading-[21px] font-medium text-text-primary">
         {label} {required && <span className="text-text-link">(필수)</span>}
       </span>
       <button
         type="button"
         onClick={onViewAll}
-        className="text-xs font-medium text-text-subtle underline"
+        className="text-xs leading-[18px] font-medium text-text-subtle underline"
       >
         전체보기
       </button>

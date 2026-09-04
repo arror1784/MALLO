@@ -19,8 +19,8 @@ export function Home() {
       <div className="px-5 pb-8 pt-8">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-xl font-bold tracking-[-0.5px] text-text-primary">안녕하세요 👋</p>
-            <p className="mt-0.5 text-[13px] text-text-subtle">
+            <p className="text-xl leading-[30px] font-bold tracking-[-0.5px] text-text-primary">안녕하세요 👋</p>
+            <p className="mt-0.5 text-[13px] leading-[19.5px] text-text-subtle">
               오늘도 {currentChild.name}이와 좋은 대화 나눠볼까요?
             </p>
           </div>
@@ -28,7 +28,7 @@ export function Home() {
             type="button"
             className="flex shrink-0 items-center gap-1 rounded-full border-[0.5px] border-border bg-surface px-3 py-2"
           >
-            <span className="text-xs font-semibold text-text-primary">
+            <span className="text-xs leading-[18px] font-semibold text-text-primary">
               {currentChild.name} · {currentChild.ageMonths}개월
             </span>
             <img src={chevronDownIcon} alt="" className="size-[14px]" />
@@ -56,9 +56,9 @@ export function Home() {
             <br />
             들려주세요
           </p>
-          <p className="mt-1 text-[13px] text-[#654000]">10분이면 충분해요</p>
+          <p className="mt-1 text-[13px] leading-[19.5px] text-[#654000]">10분이면 충분해요</p>
           <div className="mt-4 flex h-11 items-center justify-center gap-1 rounded-[20px] bg-surface-dark">
-            <span className="text-sm font-semibold text-text-inverse">녹음 시작하기</span>
+            <span className="text-sm leading-[21px] font-semibold text-text-inverse">녹음 시작하기</span>
             <img src={arrowRightWhiteIcon} alt="" className="size-4" />
           </div>
         </button>
@@ -67,7 +67,7 @@ export function Home() {
           <div className="flex items-start justify-between">
             <div>
               <p className="text-base font-semibold text-text-primary">최신 리포트</p>
-              <p className="mt-1 text-xs text-text-subtle">
+              <p className="mt-1 text-xs leading-[18px] text-text-subtle">
                 {latestReportSummary.dateLabel} · 분석 완료 ·{" "}
                 <span className="text-report-good">{latestReportSummary.confidenceLabel}</span>
               </p>
@@ -75,7 +75,7 @@ export function Home() {
             <button
               type="button"
               onClick={() => navigate("/report")}
-              className="flex items-center text-[13px] font-semibold text-text-link"
+              className="flex items-center text-[13px] leading-[19.5px] font-semibold text-text-link"
             >
               보기
               <img src={chevronRightIcon} alt="" className="size-[15px]" />
@@ -88,13 +88,13 @@ export function Home() {
                 className={`flex flex-col items-center ${i < 2 ? "border-r border-border" : ""}`}
               >
                 <p
-                  className={`text-[15px] font-bold ${
+                  className={`text-[15px] leading-[22.5px] font-bold ${
                     i === 2 ? "text-text-link" : "text-text-primary"
                   }`}
                 >
                   {stat.value}
                 </p>
-                <p className="mt-0.5 text-[10px] text-text-subtle">{stat.label}</p>
+                <p className="mt-0.5 text-[10px] leading-[15px] text-text-subtle">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -106,14 +106,14 @@ export function Home() {
               <img src={sparkleIcon} alt="" className="size-[17px]" />
             </div>
             <div>
-              <p className="text-[15px] font-semibold text-text-primary">오늘의 한마디</p>
+              <p className="text-[15px] leading-[22.5px] font-semibold text-text-primary">오늘의 한마디</p>
               <p className="mt-1 text-[13px] leading-5 text-tip-card-text">
                 {latestReportSummary.todayTip}
               </p>
               <button
                 type="button"
                 onClick={() => navigate("/coaching")}
-                className="mt-2 text-xs font-semibold text-text-link"
+                className="mt-2 text-xs leading-[18px] font-semibold text-text-link"
               >
                 미션 보기 →
               </button>
@@ -122,16 +122,16 @@ export function Home() {
         </section>
 
         <section className="mt-3 rounded-2xl border-[0.5px] border-border bg-surface px-4 py-3">
-          <p className="text-sm font-semibold text-text-primary">최근 녹음</p>
+          <p className="text-sm leading-[21px] font-semibold text-text-primary">최근 녹음</p>
           <ul>
             {recentRecordings.map((rec) => (
               <li
                 key={rec.id}
                 className="flex items-center justify-between border-t-[0.5px] border-border py-[10px] first:border-t-0"
               >
-                <span className="text-[13px] text-text-primary">{rec.label}</span>
+                <span className="text-[13px] leading-[19.5px] text-text-primary">{rec.label}</span>
                 <span
-                  className={`rounded-full px-2 py-1 text-[11px] font-semibold ${
+                  className={`rounded-full px-2 py-1 text-[11px] leading-[16.5px] font-semibold ${
                     rec.status === "analyzing"
                       ? "bg-surface-cream text-text-link"
                       : "bg-status-done-bg text-report-good"
@@ -146,10 +146,10 @@ export function Home() {
 
         <div className="mt-3 flex items-center gap-3 rounded-[20px] bg-surface-cream px-4 py-3">
           <img src={infoIcon} alt="" className="size-4" />
-          <p className="flex-1 text-xs text-tip-card-text">
+          <p className="flex-1 text-xs leading-[18px] text-tip-card-text">
             오늘 분석 1회 남았어요 · 내일 0시에 다시 채워져요
           </p>
-          <button type="button" className="text-xs font-semibold text-text-link">
+          <button type="button" className="text-xs leading-[18px] font-semibold text-text-link">
             더 자유롭게
           </button>
         </div>

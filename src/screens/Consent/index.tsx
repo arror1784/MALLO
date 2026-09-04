@@ -37,19 +37,19 @@ export function Consent() {
           <br />
           약속 하나 할게요
         </h1>
-        <p className="mt-2 text-sm text-text-body">하늘이의 이야기는 안전하게 다룰게요.</p>
+        <p className="mt-2 text-sm leading-[21px] text-text-body">하늘이의 이야기는 안전하게 다룰게요.</p>
       </div>
 
       <div className="mt-5 rounded-2xl bg-surface-dark p-5">
         <div className="flex items-center gap-2">
           <img src={shieldIcon} alt="" className="size-[15px]" />
-          <span className="text-[13px] font-semibold text-primary">말로의 데이터 약속</span>
+          <span className="text-[13px] leading-[19.5px] font-semibold text-primary">말로의 데이터 약속</span>
         </div>
         <ul className="mt-4">
           {PROMISES.map((text, i) => (
             <li
               key={text}
-              className={`flex gap-2 py-3 text-xs text-white ${
+              className={`flex gap-2 py-3 text-xs leading-[20px] text-white ${
                 i > 0 ? "border-t border-white/15" : ""
               }`}
             >
@@ -69,14 +69,14 @@ export function Consent() {
       </div>
 
       <div className="flex flex-1 flex-col justify-end pb-7">
-        <p className="text-center text-xs text-text-subtle">
+        <p className="text-center text-xs leading-[18px] text-text-subtle">
           선택 동의는 하지 않아도 모든 기본 기능을 쓸 수 있어요.
         </p>
         <button
           type="button"
           disabled={!canSubmit}
           onClick={() => navigate("/home")}
-          className="mt-3 flex h-[52px] w-full items-center justify-center rounded-[20px] bg-primary text-[15px] font-semibold text-text-primary shadow-[0_6px_8px_rgba(255,161,2,0.18)] disabled:opacity-45"
+          className="mt-3 flex h-[52px] w-full items-center justify-center rounded-[20px] bg-primary text-[15px] leading-[22.5px] font-semibold text-text-primary shadow-[0_6px_8px_rgba(255,161,2,0.18)] disabled:opacity-45"
         >
           동의하고 녹음 시작하기
         </button>
