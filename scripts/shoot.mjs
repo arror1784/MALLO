@@ -32,9 +32,18 @@ async function main() {
   for (const [index, screen] of screens.entries()) {
     const url = `${BASE_URL}${screen.path}`;
     await page.goto(url, { waitUntil: "networkidle" });
+    // DeviceFrame 바깥 배경(.bg-neutral-200)과 body 배경은 화면 확인용 배경일 뿐,
+    // 캡처에는 필요 없다 — 캡처 직전에만 투명하게 지워서 둥근 모서리 바깥
+    // 네 귀퉁이에 회색/크림색이 비쳐 보이지 않게 한다.
+    await page.evaluate(() => {
+      document.body.style.background = "transparent";
+      document.querySelectorAll(".bg-neutral-200").forEach((el) => {
+        el.style.background = "transparent";
+      });
+    });
     const framePath = path.join(OUT_DIR, fileNameFor(screen, index));
     const frame = page.locator("[data-device-frame]");
-    await frame.screenshot({ path: framePath });
+    await frame.screenshot({ path: framePath, omitBackground: true });
     console.log(`saved ${framePath} (${screen.implemented ? "implemented" : "coming soon"})`);
   }
 
