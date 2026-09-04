@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", "Pretendard Variable", -apple-system, sans-serif;
+
+  /* Figma에서 추출한 색 토큰. 컴포넌트에서 색상 리터럴(#fff, text-[#...]) 직접 사용 금지 — 항상 이 이름을 통해서만 참조한다. */
+  --color-bg: #fffdfa;
+  --color-surface: #ffffff;
+  --color-surface-cream: #fff6e8;
+  --color-surface-dark: #160e00;
+
+  --color-primary: #ffa102;
+  --color-primary-soft: #ffe0a4;
+
+  --color-text-primary: #160e00;
+  --color-text-muted: #6f6251;
+  --color-text-subtle: #9b8f7d;
+  --color-text-link: #c27b00;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #f0e6d6;
+  --color-border-strong: #e4d9c8;
+
+  --color-danger: #e0483e;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}

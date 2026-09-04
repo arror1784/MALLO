@@ -1,0 +1,20 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.tsbuildinfo
+
+# OMC 런타임 상태 (하네스 운영 아티팩트, 커밋 대상 아님)
+.omc/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# 캡처 산출물은 매번 재생성 가능 — 저장소에는 최종 제출본만 별도로 첨부
+/screenshots/*.png
+
+.DS_Store
+*.log
