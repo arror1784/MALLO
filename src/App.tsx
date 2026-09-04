@@ -10,6 +10,8 @@ import { Record } from "@/screens/Record";
 import { RecordProcessing } from "@/screens/RecordProcessing";
 import { ReportHome } from "@/screens/ReportHome";
 import { ReportSessions } from "@/screens/ReportSessions";
+import { ReportDetail } from "@/screens/ReportDetail";
+import { MetricDetail } from "@/screens/MetricDetail";
 import { screens } from "@/routes/screens";
 
 const implementedComponents: Record<string, () => React.JSX.Element> = {
@@ -22,6 +24,8 @@ const implementedComponents: Record<string, () => React.JSX.Element> = {
   "/record/processing": RecordProcessing,
   "/report": ReportHome,
   "/report/sessions": ReportSessions,
+  "/report/detail": ReportDetail,
+  "/report/open-question": MetricDetail,
 };
 
 export function App() {
