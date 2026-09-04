@@ -16,7 +16,7 @@ export const screens: ScreenEntry[] = [
   { path: "/", label: "첫화면", figmaNodeId: "1:9", implemented: true },
   { path: "/signup", label: "회원가입", figmaNodeId: "1:86", implemented: true },
   { path: "/consent", label: "약관 동의", figmaNodeId: "1:164", implemented: true },
-  { path: "/home", label: "메인화면", figmaNodeId: "1:257", implemented: false },
+  { path: "/home", label: "메인화면", figmaNodeId: "1:257", implemented: true },
   { path: "/record/prepare", label: "회원가입 후 자녀 등록", figmaNodeId: "1:427", implemented: true },
   { path: "/record", label: "녹음 화면", figmaNodeId: "1:527", implemented: false },
   { path: "/record/processing", label: "녹음화면 - 저장 후 분석 중", figmaNodeId: "1:570", implemented: false },

@@ -10,6 +10,7 @@
   --color-surface-dark: #160e00;
 
   --color-primary: #ffa102;
+  --color-primary-light: #ffbb3e;
   --color-primary-soft: #ffe0a4;
 
   --color-text-primary: #160e00;
@@ -33,6 +34,11 @@
   --color-tip-text: #635744;
   --color-success-bg: #eef8f1;
   --color-success-text: #347756;
+
+  --color-report-good: #4caf7d;
+  --color-tip-card-bg: #fff1d7;
+  --color-tip-card-text: #695b48;
+  --color-status-done-bg: #e7f5ec;
 
   --color-danger: #e0483e;
 }

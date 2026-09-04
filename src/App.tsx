@@ -5,6 +5,7 @@ import { Onboarding } from "@/screens/Onboarding";
 import { SignUp } from "@/screens/SignUp";
 import { Consent } from "@/screens/Consent";
 import { RecordPrepare } from "@/screens/RecordPrepare";
+import { Home } from "@/screens/Home";
 import { screens } from "@/routes/screens";
 
 const implementedComponents: Record<string, () => React.JSX.Element> = {
@@ -12,6 +13,7 @@ const implementedComponents: Record<string, () => React.JSX.Element> = {
   "/signup": SignUp,
   "/consent": Consent,
   "/record/prepare": RecordPrepare,
+  "/home": Home,
 };
 
 export function App() {
