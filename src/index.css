@@ -40,6 +40,12 @@
   --color-tip-card-text: #695b48;
   --color-status-done-bg: #e7f5ec;
 
+  --color-record-ring-track: #fff8eb;
+  --color-record-ring-border: #ffcf79;
+  --color-pill-border: #eadbc6;
+  --color-overlay-btn-bg: #ffffffb3;
+  --color-step-pending-bg: #f5f0e7;
+
   --color-danger: #e0483e;
 }
 

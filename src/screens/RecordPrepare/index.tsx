@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router";
 import backIcon from "@/assets/icons/back.svg";
 import personIcon from "@/assets/icons/person.svg";
@@ -8,6 +7,7 @@ import checkCircleIcon from "@/assets/icons/check-circle.svg";
 import micIcon from "@/assets/icons/mic.svg";
 import { currentChild } from "@/data/child";
 import { situations } from "@/data/situations";
+import { useRecordingStore } from "@/store/recordingStore";
 
 const TIPS = [
   { icon: personIcon, text: "아이와 50cm 이내" },
@@ -18,7 +18,8 @@ const TIPS = [
 /** Figma node 1:427 "Prepare" — 녹음 시작 전 대상·상황 확인 */
 export function RecordPrepare() {
   const navigate = useNavigate();
-  const [situationId, setSituationId] = useState("play");
+  const situationId = useRecordingStore((s) => s.situationId);
+  const setSituationId = useRecordingStore((s) => s.setSituationId);
 
   return (
     <div className="flex h-full w-full flex-col bg-surface px-6 pt-8" data-node-id="1:427">
