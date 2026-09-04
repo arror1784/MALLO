@@ -49,8 +49,10 @@
   --color-status-failed-text: #81796d;
   --color-report-badge-text: #a8e6c4;
   --color-metric-track: #eadfce;
+  --color-selected-card-bg: #fffaf1;
+  --color-radio-border: #cfc4b5;
 
-  --color-danger: #e0483e;
+  --color-danger: #b95042;
 }
 
 html,
