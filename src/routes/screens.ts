@@ -14,10 +14,10 @@ export interface ScreenEntry {
 
 export const screens: ScreenEntry[] = [
   { path: "/", label: "첫화면", figmaNodeId: "1:9", implemented: true },
-  { path: "/signup", label: "회원가입", figmaNodeId: "1:86", implemented: false },
-  { path: "/signup/terms", label: "약관 동의", figmaNodeId: "1:164", implemented: false },
+  { path: "/signup", label: "회원가입", figmaNodeId: "1:86", implemented: true },
+  { path: "/consent", label: "약관 동의", figmaNodeId: "1:164", implemented: true },
   { path: "/home", label: "메인화면", figmaNodeId: "1:257", implemented: false },
-  { path: "/signup/child", label: "회원가입 후 자녀 등록", figmaNodeId: "1:427", implemented: false },
+  { path: "/record/prepare", label: "회원가입 후 자녀 등록", figmaNodeId: "1:427", implemented: true },
   { path: "/record", label: "녹음 화면", figmaNodeId: "1:527", implemented: false },
   { path: "/record/processing", label: "녹음화면 - 저장 후 분석 중", figmaNodeId: "1:570", implemented: false },
   { path: "/report/entry", label: "리포트 화면 - 우측 상단 리포트 버튼 클릭", figmaNodeId: "1:640", implemented: false },

@@ -2,10 +2,16 @@ import { Route, Routes } from "react-router";
 import { DeviceFrame } from "@/components/DeviceFrame";
 import { ComingSoon } from "@/screens/ComingSoon";
 import { Onboarding } from "@/screens/Onboarding";
+import { SignUp } from "@/screens/SignUp";
+import { Consent } from "@/screens/Consent";
+import { RecordPrepare } from "@/screens/RecordPrepare";
 import { screens } from "@/routes/screens";
 
 const implementedComponents: Record<string, () => React.JSX.Element> = {
   "/": Onboarding,
+  "/signup": SignUp,
+  "/consent": Consent,
+  "/record/prepare": RecordPrepare,
 };
 
 export function App() {

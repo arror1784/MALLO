@@ -20,6 +20,19 @@
 
   --color-border: #f0e6d6;
   --color-border-strong: #e4d9c8;
+  --color-border-input: #e8dccb;
+
+  --color-text-placeholder: #b8ac9b;
+  --color-text-body: #786b59;
+  --color-checkbox-border: #d7cbbc;
+
+  --color-brand-google: #4285f4;
+
+  --color-avatar-bg: #ffe7b4;
+  --color-chip-selected-bg: #fff1d7;
+  --color-tip-text: #635744;
+  --color-success-bg: #eef8f1;
+  --color-success-text: #347756;
 
   --color-danger: #e0483e;
 }
