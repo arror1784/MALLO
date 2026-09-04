@@ -49,6 +49,7 @@ export function ReportSessions() {
             <button
               key={f.id}
               type="button"
+              aria-pressed={active}
               onClick={() => setFilter(f.id)}
               className={`shrink-0 rounded-full px-4 py-2 text-[13px] font-medium ${
                 active ? "bg-surface-dark text-text-inverse" : "bg-surface-cream text-text-body"
@@ -66,6 +67,8 @@ export function ReportSessions() {
           return (
             <li
               key={session.id}
+              data-testid="session-item"
+              data-status={session.status}
               className="rounded-2xl border-[0.5px] border-border bg-surface p-4"
             >
               <div className="flex items-start justify-between">

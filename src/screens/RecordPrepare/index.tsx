@@ -65,6 +65,7 @@ export function RecordPrepare() {
             <button
               key={situation.id}
               type="button"
+              aria-pressed={selected}
               onClick={() => setSituationId(situation.id)}
               className={`flex h-12 items-center justify-center rounded-[20px] border-[0.5px] text-sm font-medium ${
                 selected

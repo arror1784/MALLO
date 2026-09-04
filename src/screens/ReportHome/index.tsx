@@ -65,6 +65,7 @@ export function ReportHome() {
                 <button
                   key={p}
                   type="button"
+                  aria-pressed={period === p}
                   onClick={() => setPeriod(p)}
                   className={`rounded-2xl px-[10px] py-1 text-[11px] font-semibold ${
                     period === p
@@ -78,7 +79,10 @@ export function ReportHome() {
             </div>
           </div>
           <div className="mt-3">
-            <Sparkline values={period === "weekly" ? weeklyTrend.weekly : weeklyTrend.monthly} />
+            <Sparkline
+              testId="trend-sparkline"
+              values={period === "weekly" ? weeklyTrend.weekly : weeklyTrend.monthly}
+            />
           </div>
           <p className="text-xs">
             <span className="font-medium text-text-link">{weeklyTrend.deltaLabel}</span>{" "}

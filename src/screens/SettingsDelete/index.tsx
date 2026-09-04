@@ -30,6 +30,8 @@ export function SettingsDelete() {
       <div className="mt-6 flex flex-col gap-2">
         <button
           type="button"
+          role="radio"
+          aria-checked={target === "account"}
           disabled={submitted}
           onClick={() => setTarget("account")}
           className={`flex items-center gap-3 rounded-[20px] border-[0.5px] p-4 text-left ${
@@ -48,6 +50,8 @@ export function SettingsDelete() {
 
         <button
           type="button"
+          role="radio"
+          aria-checked={target === "child"}
           disabled={submitted}
           onClick={() => setTarget("child")}
           className={`flex items-center gap-3 rounded-[20px] border-[0.5px] p-4 text-left ${
@@ -74,7 +78,7 @@ export function SettingsDelete() {
 
       <div className="flex flex-1 flex-col justify-end pb-8 pt-5">
         {submitted ? (
-          <div className="rounded-[20px] bg-status-done-bg p-4 text-center">
+          <div data-testid="delete-confirmation" className="rounded-[20px] bg-status-done-bg p-4 text-center">
             <p className="text-sm font-semibold text-report-good">삭제 요청이 접수됐어요</p>
             <p className="mt-1 text-xs text-text-body">처리 완료까지 최대 5영업일이 걸려요.</p>
           </div>

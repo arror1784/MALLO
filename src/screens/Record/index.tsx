@@ -54,7 +54,10 @@ export function Record() {
         }}
       >
         <div className="flex flex-col items-center">
-          <p className="font-mono text-[51px] tracking-[-5px] text-text-primary">
+          <p
+            data-testid="record-timer"
+            className="font-mono text-[51px] tracking-[-5px] text-text-primary"
+          >
             {formatElapsed(elapsed)}
           </p>
           <div className="mt-5 flex h-12 items-center justify-center gap-[6px]">

@@ -36,6 +36,8 @@ export function ReportExport() {
 
       <button
         type="button"
+        role="radio"
+        aria-checked={contentType === "summary"}
         onClick={() => setContentType("summary")}
         className={`mt-4 flex items-start gap-3 rounded-2xl border-[0.5px] p-4 text-left ${
           contentType === "summary" ? "border-primary bg-selected-card-bg" : "border-border bg-surface"
@@ -58,6 +60,8 @@ export function ReportExport() {
 
       <button
         type="button"
+        role="radio"
+        aria-checked={contentType === "detailed"}
         onClick={() => setContentType("detailed")}
         className={`mt-4 flex items-start gap-3 rounded-2xl border-[0.5px] p-4 text-left ${
           contentType === "detailed" ? "border-primary bg-selected-card-bg" : "border-border bg-surface"
@@ -82,6 +86,7 @@ export function ReportExport() {
           <button
             key={f.id}
             type="button"
+            aria-pressed={format === f.id}
             onClick={() => setFormat(f.id)}
             className={`flex flex-col items-center gap-2 rounded-[20px] border-[0.5px] py-[18px] ${
               format === f.id ? "border-primary bg-selected-card-bg" : "border-border bg-surface"

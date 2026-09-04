@@ -58,6 +58,8 @@ export function RecordProcessing() {
           return (
             <div
               key={label}
+              data-testid="processing-step"
+              data-status={status}
               className={`flex items-center gap-3 py-5 ${
                 i > 0 ? "border-t-[0.5px] border-[#f6efe5]" : ""
               }`}

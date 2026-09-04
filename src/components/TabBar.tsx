@@ -25,7 +25,13 @@ export function TabBar() {
       {TABS.map((tab) => {
         const active = location.pathname.startsWith(tab.path);
         return (
-          <Link key={tab.path} to={tab.path} className="flex w-16 flex-col items-center gap-1">
+          <Link
+            key={tab.path}
+            to={tab.path}
+            data-testid={`tab-${tab.path.slice(1)}`}
+            aria-current={active ? "page" : undefined}
+            className="flex w-16 flex-col items-center gap-1"
+          >
             <span
               aria-hidden
               className={`block size-[21px] ${active ? "text-primary" : "text-text-subtle"}`}

@@ -23,10 +23,14 @@ export function MetricDetail() {
       </button>
 
       <p className="mt-5 text-sm text-text-subtle">핵심 지표</p>
-      <h1 className="mt-1 text-2xl font-bold text-text-primary">{metric.label}</h1>
+      <h1 data-testid="metric-label" className="mt-1 text-2xl font-bold text-text-primary">
+        {metric.label}
+      </h1>
 
       <div className="mt-5 flex flex-col items-center">
-        <p className="text-[52px] font-bold leading-none text-primary">{metric.value}</p>
+        <p data-testid="metric-value" className="text-[52px] font-bold leading-none text-primary">
+          {metric.value}
+        </p>
         <p className="mt-2 text-[13px] text-text-body">{metric.refRangeLabel}</p>
         <span className="mt-2 rounded-full bg-status-done-bg px-3 py-1.5 text-xs font-semibold text-report-good">
           {metric.deltaLabel}

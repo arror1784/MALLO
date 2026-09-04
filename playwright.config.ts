@@ -18,7 +18,10 @@ export default defineConfig({
   projects: [
     {
       name: "iphone16",
-      use: { ...devices["iPhone 15"], viewport: { width: 393, height: 852 } },
+      // 캡처 스크립트(scripts/shoot.mjs)와 동일하게 Chromium 기반으로 통일한다.
+      // 기기 프리셋(devices['iPhone 15'])은 WebKit을 요구해 별도 브라우저
+      // 설치가 필요해지므로 쓰지 않고, 뷰포트만 iOS 393x852로 맞춘다.
+      use: { ...devices["Desktop Chrome"], viewport: { width: 393, height: 852 }, hasTouch: true },
     },
   ],
   webServer: {
