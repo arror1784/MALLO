@@ -16,5 +16,12 @@ dist-ssr/
 # 캡처 산출물은 매번 재생성 가능 — 저장소에는 최종 제출본만 별도로 첨부
 /screenshots/*.png
 
+# 픽셀 대조 산출물(합성 이미지·리포트)은 npm run shoot && npm run pixel-diff로
+# 매번 재생성 가능. 단 reference/(Figma 원본 캡처)는 Figma MCP 접근이 있어야만
+# 다시 받을 수 있어 커밋 대상이다.
+/pixel-diff/output/
+/pixel-diff/report.json
+/pixel-diff/REPORT.md
+
 .DS_Store
 *.log

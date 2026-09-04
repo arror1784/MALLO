@@ -81,7 +81,14 @@
 
 ## 8. 검증
 
-- 픽셀 대조: 구현 화면 캡처 vs Figma 원본을 좌/중/우 3분할로 비교.
+- 픽셀 대조: `npm run shoot && npm run pixel-diff`로 자동화되어 있다.
+  `pixel-diff/reference/`(Figma 원본, get_screenshot으로 받아 커밋된 자산 —
+  URL이 ~7일 후 만료되므로 재요청 없이는 다시 못 받는다)와 `screenshots/`를
+  화면별로 좌(원본)/중(구현)/우(차이) 3분할로 합성해 `pixel-diff/output/`에
+  저장하고, 불일치율을 `pixel-diff/REPORT.md`로 남긴다. WARN(≥3%)/FAIL(≥10%)
+  기준은 `scripts/pixel-diff.mjs`에 있다 — 화면 전체에 텍스트가 많이
+  쌓일수록 줄 간격(leading) 미세 오차가 누적돼 WARN이 뜨기 쉬우니, 원인이
+  레이아웃 버그인지 line-height 정밀도 문제인지 합성 이미지로 먼저 확인한다.
 - 기능 자동 검증: Playwright(`e2e/`)로 스크롤·모달·폼·상태동기화·날짜이동
   등 시나리오 검증. 로케일은 `ko-KR` 고정(`playwright.config.ts`에 설정됨).
 - 카메라 등 `getUserMedia`류 기능이 들어가면, LAN IP로 다른 기기 접속 시
