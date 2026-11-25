@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MALLO 대표이미지</title>
+    <!--
+      전시 포스터 양식의 "대표이미지" 칸에 들어갈 이미지 원본(1200×900, 4:3).
+      팀명·아이템 소개 등 글자는 포스터 양식이 따로 넣으므로 여기선 앱 화면만 보여준다.
+      scripts/render-key-visual.mjs가 크림 배경/투명 배경 두 벌로 렌더링한다.
+      색은 src/index.css @theme 토큰 값을 그대로 옮겼다.
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <style>
+      :root {
+        --color-surface-cream: #fff6e8;
+        --color-surface-dark: #160e00;
+        --color-primary: #ffa102;
+        --color-primary-soft: #ffe0a4;
+        --color-text-primary: #160e00;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1200px; height: 900px; }
+      body {
+        font-family: "Pretendard", sans-serif;
+        background: var(--color-surface-cream);
+        color: var(--color-text-primary);
+        overflow: hidden;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+      }
+      body.transparent { background: transparent; }
+
+      /* 로고의 말풍선 "O"를 키운 배경 모티프 */
+      .bubble {
+        position: absolute;
+        left: 230px;
+        top: 50px;
+        width: 800px;
+        height: 800px;
+        color: var(--color-primary);
+      }
+      .ring {
+        position: absolute;
+        left: 60px;
+        top: 90px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        border: 44px solid var(--color-primary-soft);
+      }
+
+      .phone {
+        position: absolute;
+        width: 320px;
+        padding: 11px;
+        border-radius: 58px;
+        background: var(--color-surface-dark);
+        box-shadow: 0 36px 60px rgba(50, 31, 0, 0.26), 0 8px 18px rgba(50, 31, 0, 0.16);
+      }
+      .phone img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1179 / 2556;
+        object-fit: cover;
+        border-radius: 47px;
+        /* 캡처에 포함된 기기 테두리 귀퉁이를 잘라낸다 */
+        clip-path: inset(0 round 47px);
+      }
+      .phone--back { left: 300px; top: 100px; transform: rotate(-7deg); }
+      .phone--front { left: 640px; top: 56px; transform: rotate(5deg); }
+
+      .chip {
+        position: absolute;
+        padding: 16px 24px;
+        border-radius: 26px;
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        white-space: nowrap;
+        box-shadow: 0 10px 24px rgba(50, 31, 0, 0.16);
+      }
+      .chip--light { background: #fff; border-bottom-left-radius: 8px; }
+      .chip--dark { background: var(--color-surface-dark); color: #fff; border-bottom-right-radius: 8px; }
+      .chip small { display: block; font-size: 17px; font-weight: 500; opacity: 0.6; margin-bottom: 4px; }
+    </style>
+  </head>
+  <body>
+    <svg class="bubble" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="48" r="44" fill="currentColor" />
+      <path d="M22 78 L12 96 L36 88 Z" fill="currentColor" />
+    </svg>
+    <div class="ring" aria-hidden="true"></div>
+
+    <div class="phone phone--back"><img src="assets/screen-onboarding.png" alt="" /></div>
+    <div class="phone phone--front"><img src="assets/screen-home.png" alt="" /></div>
+
+    <div class="chip chip--light" style="left: 190px; top: 560px"><small>열린 질문</small>28%</div>
+    <div class="chip chip--dark" style="right: 60px; top: 150px"><small>오늘의 한마디</small>“뭐가 제일 맛있었어?”</div>
+  </body>
+</html>
