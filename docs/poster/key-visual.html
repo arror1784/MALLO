@@ -87,6 +87,9 @@
       }
       .chip--light { background: #fff; border-bottom-left-radius: 8px; }
       .chip--dark { background: var(--color-surface-dark); color: #fff; border-bottom-right-radius: 8px; }
+      /* 칩은 휴대폰 화면보다 튀지 않게 85%로 줄인다. 기준점은 바깥쪽 가장자리 */
+      .chip--light { transform: scale(0.85); transform-origin: left center; }
+      .chip--dark { transform: scale(0.85); transform-origin: right top; }
       .chip--rec { display: flex; align-items: center; gap: 14px; padding: 20px 26px; }
       .rec-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--color-danger); }
       .wave { display: flex; align-items: center; gap: 5px; height: 32px; }
