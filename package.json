@@ -10,6 +10,7 @@
     "typecheck": "tsc -b --noEmit",
     "shoot": "node scripts/shoot.mjs",
     "pixel-diff": "node scripts/pixel-diff.mjs",
+    "poster": "node scripts/render-poster.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {

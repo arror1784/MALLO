@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MALLO 전시부스 포스터</title>
+    <!--
+      전시부스 포스터 원본. 1000×1414 CSS px = A 규격(1:√2) 세로 비율.
+      scripts/render-poster.mjs가 이 파일을 고배율 PNG와 A1 PDF로 렌더링한다.
+      색은 src/index.css @theme 토큰 값을 그대로 옮겼다.
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <style>
+      :root {
+        --color-surface-cream: #fff6e8;
+        --color-surface-dark: #160e00;
+        --color-primary: #ffa102;
+        --color-primary-light: #ffbb3e;
+        --color-primary-soft: #ffe0a4;
+        --color-text-primary: #160e00;
+        --color-text-muted: #6f6251;
+        --color-border: #f0e6d6;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1000px; height: 1414px; }
+      body {
+        font-family: "Pretendard", sans-serif;
+        background: var(--color-surface-cream);
+        color: var(--color-text-primary);
+        overflow: hidden;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* 로고의 말풍선 "O"를 키운 배경 모티프 */
+      .bubble {
+        position: absolute;
+        left: 300px;
+        top: 560px;
+        width: 760px;
+        height: 760px;
+        color: var(--color-primary);
+      }
+      .ring {
+        position: absolute;
+        left: -140px;
+        top: 760px;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        border: 56px solid var(--color-primary-soft);
+      }
+
+      .logo { position: absolute; left: 80px; top: 88px; width: 300px; }
+
+      .headline {
+        position: absolute;
+        left: 80px;
+        top: 220px;
+        font-size: 104px;
+        line-height: 1.12;
+        font-weight: 800;
+        letter-spacing: -4px;
+      }
+      .headline em { font-style: normal; color: var(--color-primary); }
+      .sub {
+        position: absolute;
+        left: 84px;
+        top: 476px;
+        font-size: 30px;
+        line-height: 1.55;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        color: var(--color-text-muted);
+      }
+
+      .phone {
+        position: absolute;
+        width: 318px;
+        padding: 11px;
+        border-radius: 58px;
+        background: var(--color-surface-dark);
+        box-shadow: 0 40px 70px rgba(50, 31, 0, 0.28), 0 8px 18px rgba(50, 31, 0, 0.16);
+      }
+      .phone img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1179 / 2556;
+        object-fit: cover;
+        border-radius: 47px;
+        /* 캡처에 포함된 기기 테두리 귀퉁이를 잘라낸다 */
+        clip-path: inset(0 round 47px);
+      }
+      .phone--back { left: 150px; top: 640px; transform: rotate(-7deg); }
+      .phone--front { left: 520px; top: 600px; transform: rotate(5deg); }
+
+      .chip {
+        position: absolute;
+        padding: 16px 24px;
+        border-radius: 26px;
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        white-space: nowrap;
+        box-shadow: 0 10px 24px rgba(50, 31, 0, 0.16);
+      }
+      .chip--light { background: #fff; color: var(--color-text-primary); border-bottom-left-radius: 8px; }
+      .chip--dark { background: var(--color-surface-dark); color: #fff; border-bottom-right-radius: 8px; }
+      .chip small { display: block; font-size: 17px; font-weight: 500; opacity: 0.6; margin-bottom: 4px; }
+
+      .band {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 196px;
+        background: var(--color-surface-dark);
+        color: #fff;
+        padding: 40px 80px 0;
+      }
+      .band h2 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+      }
+      .band h2 span { color: var(--color-primary); }
+      .steps { display: flex; align-items: center; gap: 16px; margin-top: 26px; }
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+      }
+      .step b {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text-primary);
+        font-size: 17px;
+        font-weight: 800;
+        flex: none;
+      }
+      .sep { flex: 1; height: 2px; background: rgba(255, 255, 255, 0.25); }
+    </style>
+  </head>
+  <body>
+    <svg class="bubble" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="48" r="44" fill="currentColor" />
+      <path d="M22 78 L12 96 L36 88 Z" fill="currentColor" />
+    </svg>
+    <div class="ring" aria-hidden="true"></div>
+
+    <img class="logo" src="assets/logo.png" alt="MALLO" />
+
+    <h1 class="headline">아이는<br /><em>말로</em> 자랍니다</h1>
+    <p class="sub">하루 10분 대화 녹음으로,<br />우리 집 대화 습관을 비춰드려요.</p>
+
+    <div class="phone phone--back"><img src="assets/screen-onboarding.png" alt="" /></div>
+    <div class="phone phone--front"><img src="assets/screen-home.png" alt="" /></div>
+
+    <div class="chip chip--light" style="left: 84px; top: 1010px"><small>열린 질문</small>28%</div>
+    <div class="chip chip--dark" style="right: 64px; top: 478px"><small>오늘의 한마디</small>“뭐가 제일 맛있었어?”</div>
+
+    <section class="band">
+      <h2>부모의 대화를 <span>AI가 듣고</span>, 내일의 한마디를 코칭합니다</h2>
+      <div class="steps">
+        <div class="step"><b>1</b>대화 녹음</div>
+        <i class="sep"></i>
+        <div class="step"><b>2</b>AI 분석 리포트</div>
+        <i class="sep"></i>
+        <div class="step"><b>3</b>맞춤 코칭·미션</div>
+        <i class="sep"></i>
+        <div class="step"><b>4</b>변화 확인</div>
+      </div>
+    </section>
+  </body>
+</html>
