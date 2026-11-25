@@ -1,19 +1,13 @@
 import { Link } from "react-router";
 import arrowRightIcon from "@/assets/icons/arrow-right.svg";
+import logoImage from "@/assets/images/logo.png";
 
 /** Figma node 1:9 "첫화면" */
 export function Onboarding() {
   return (
     <div className="flex h-full w-full flex-col bg-surface" data-node-id="1:9">
       <div className="relative h-[340px] shrink-0 overflow-hidden rounded-b-[30px] bg-surface-cream">
-        <div className="absolute left-6 top-10 flex items-center">
-          <span className="font-['Pretendard'] text-[27px] leading-[27px] font-black tracking-[-1.2px] text-text-primary">
-            MALL
-          </span>
-          <span className="ml-px flex size-[23px] items-center justify-center rounded-full bg-primary text-[14px] leading-[21px] font-black tracking-[-1.2px] text-text-primary">
-            O
-          </span>
-        </div>
+        <img src={logoImage} alt="MALLO" className="absolute left-6 top-10 h-[27px] w-auto" />
 
         <div className="absolute left-[96px] top-[93px] flex w-[200px] items-end gap-4">
           <div className="relative flex h-[151px] w-[104px] flex-col items-center justify-end rounded-t-[52px] bg-surface-dark">
